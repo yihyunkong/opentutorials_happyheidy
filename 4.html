@@ -6,7 +6,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1><a href="index.html">☾ Heidy's happiness !</a></h1>
+  <h1>
+    <a href="index.html">☾ Heidy's happiness !</a>
+    <input id="dark_white" type="button" value="dark" onclick="
+      var target = document.querySelector('body')
+      if(this.value === 'dark'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'white';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'skyblue';
+          i = i + 1;
+        }
+      }
+      else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'dark';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'black';
+          i = i + 1;
+        }
+      }
+    ">
+  </h1>
   <div id="grid">
     <ul>
       <li><a href="1.html">routine</a></li>
@@ -15,9 +44,9 @@
       <li><a href="4.html" id="active">portfolio</a></li>
     </ul>
     <div id="article">
-      <h2><a href="https://en.dict.naver.com/#/entry/enko/afcec9ee537d47c1b2cb1f51f0fd0267"
+      <h2><span style="background-color:powderblue"><a href="https://en.dict.naver.com/#/entry/enko/afcec9ee537d47c1b2cb1f51f0fd0267"
          target="_blank" title="네이버 영어사전">
-        portfolio</a></h2>
+        portfolio</a></span></h2>
         <p style="margin-top:40px">
         <img src="first.jpg" width="500" height="500">
       </p>
